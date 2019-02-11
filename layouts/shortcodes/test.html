@@ -1,0 +1,22 @@
+
+<script>
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+	let gutters = document.getElementsByClassName("ths-gutter")
+
+	setInterval(() => {
+		for (let gutter of gutters) {
+			var attribute = gutter.getAttribute("data-debug");
+			if ((attribute === null) || (attribute == "false")) {
+				gutter.setAttribute('data-debug', 'true');
+			} else {
+				gutter.setAttribute('data-debug', 'false');
+			}
+		}
+		ths.Render(document.getElementsByClassName("ths-gutter"))
+	}, 5000)
+});
+
+</script>

@@ -1,0 +1,19 @@
+
+<script>
+var parentTag = document.scripts[document.scripts.length - 1].parentNode;
+parentTag.classList.add("ths-gutter");
+
+{{ with .Get "tags"}} parentTag.setAttribute('data-tags', '{{.}}'); {{ end }}
+{{ with .Get "debug"}} parentTag.setAttribute('data-debug', '{{.}}'); {{ end }}
+{{ with .Get "placement"}} parentTag.setAttribute('data-placement', '{{.}}'); {{ end }}
+{{ with .Get "width"}} parentTag.setAttribute('data-width', '{{.}}'); {{ end }}
+{{ with .Get "color"}} parentTag.setAttribute('data-color', '{{.}}'); {{ end }}
+{{ with .Get "margin"}} parentTag.setAttribute('data-margin', '{{.}}'); {{ end }}
+{{ with .Get "resolution"}} parentTag.setAttribute('data-resolution', '{{.}}'); {{ end }}
+{{ with .Get "gap"}} parentTag.setAttribute('data-gap', '{{.}}'); {{ end }}
+{{ with .Get "labels"}} parentTag.setAttribute('data-labels', '{{.}}'); {{ end }}
+{{ with .Get "baseline"}} parentTag.setAttribute('data-baseline', '{{.}}'); {{ end }}
+{{ with .Get "padding"}} parentTag.setAttribute('data-padding', '{{.}}'); {{ end }}
+{{ with .Get "merge"}} parentTag.setAttribute('data-merge', '{{.}}'); {{ end }}
+
+</script>

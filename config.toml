@@ -1,0 +1,11 @@
+baseURL = "http://thehonestscoop.com/"
+languageCode = "en-us"
+title = "The Honest Scoop"
+theme = "book"
+pygmentsCodeFences = true
+
+[[menu.main]]
+  name = "Developers"
+  weight = 130
+  identifier = "Docs"
+  url = "//docs/"
