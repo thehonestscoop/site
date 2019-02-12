@@ -34,3 +34,8 @@ The full details can be [found here.](https://github.com/padolsey/findAndReplace
 - and successfully satisfy a Quality Check
 
 Your work will be merged to the fork and possibly to the upstream repo.
+
+
+## **Contact**
+
+[thehonestscoop@gmail.com](mailto:thehonestscoop@gmail.com)

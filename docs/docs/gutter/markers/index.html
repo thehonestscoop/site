@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markers | The Honest Scoop</title>
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://thehonestscoop.com/normalize.min.css">
+
+<link rel="stylesheet" href="/book.min.9caf26ee2daca225930c0f85fd9eaa9f543aea51e1c0f8096e61e8a6706ae066.css">
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+        <h2 class="book-brand">
+  <a href="https://thehonestscoop.com/">The Honest Scoop</a>
+</h2>
+        
+
+        
+          
+
+
+  
+  
+    
+    
+  
+ 
+  <ul>
+    
+    <li><a href="/docs/gutter/">
+    Gutter</a> 
+  <ul>
+    
+
+    
+    <li>
+      <a href="/docs/gutter/install/">Installation</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/gutter/">The Gutter</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/markers/" class="active">Markers</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/hugo/">Hugo shortcodes</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/faq/">FAQ</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/bounty/">Bounty ($30)</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/license/">License</a>
+    </li>
+    
+  </ul>
+
+    </li>
+    
+
+    
+  </ul>
+
+
+
+
+
+        
+
+        
+      </nav>
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://thehonestscoop.com/svg/menu.svg" />
+  </label>
+  <strong>Markers</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="markers"><strong>Markers</strong></h1>
+
+<h2 id="usage"><strong>Usage</strong></h2>
+
+<p>A marker is denoted by using a <code>span</code> tag with a class of <code>ths-marker</code>. You can place markers within the boundary of any sentence.</p>
+
+<p><strong>You must prefix</strong> each parameter below with <code>data-</code> in the HTML.</p>
+
+<h3 id="tag-required"><strong>tag</strong> (required)</h3>
+
+<p>The <strong>tag</strong> denotes to which strip in the gutter the marker belongs to.</p>
+
+<h3 id="max-default-1-0"><strong>max</strong> (default: 1.0)</h3>
+
+<p>The <strong>max</strong> signifies the maximum shade in the strip. The maximum shade is <strong>always</strong> at the position of the marker and is usually 100% unless reduced by the <code>max</code> parameter.</p>
+
+<p>The value can be a decimal ranging from <code>0.0</code> to <code>1.0</code> or a percentage. A value of <code>0.5</code> indicates that the shade is at 50% darkness compared to the default.</p>
+
+<h3 id="limit-default-no-limit"><strong>limit</strong> (default: no limit)</h3>
+
+<p>The <strong>limit</strong> specifies the range of the shading on either side of the marker.</p>
+
+<p>A <code>limit</code> of <code>&quot;3s&quot;</code> means the shading will apply from <code>±3 (inclusive)</code> sentences on either side of the location of the marker. The shading will abruptly end at the limit.</p>
+
+<h3 id="spread-default-no-spread"><strong>spread</strong> (default: no spread)</h3>
+
+<p>The <strong>spread</strong> is used to apply a gradient to the strip&rsquo;s shade based on the equation for a bell curve.</p>
+
+<p>The <code>spread</code> parameter requires 2 numbers separated by a comma. The first number represents the sentences away from the marker and the second decimal represents what the shade value should be at that position.</p>
+
+<p>A spread of <code>3,95%</code> indicates that the shading of the strip should be at 95% darkness when it is 3 sentences away from the location of the marker.</p>
+
+<p>The <code>max</code> value is independent of the spread. A spread of <code>95%</code> at 3 sentences away does not necessarily render to a <code>95%</code> shade. The <code>max</code> will get multiplied to further reduce the shade.</p>
+
+<h2 id="overlapping-markers"><strong>Overlapping Markers</strong></h2>
+
+<p>When multiple markers overlap, the darkest marker gets rendered. This is also the case when multiple markers have different spread values. At any given sentence, the darkest shade is used.</p>
+
+<h2 id="example"><strong>Example</strong></h2>
+
+<p>
+In viverra nunc et commodo finibus. Sed id molestie sapien. Cras eu leo non augue vulputate posuere ac sed justo <strong style="background-color: yellow">&lt;span class="ths-marker" data-tag="xxx" data-max="75%" data-spread="3,95%">&lt;/span&gt;</strong> nullam ac dolor ut nisl molestie fringilla. Phasellus nec risus eu leo aliquam ornare. Etiam mi neque, <strong style="background-color: yellow">&lt;span class="ths-marker" data-tag="yyy" data-max="100%" data-limit="1s">&lt;/span></strong> iaculis at sapien in, vestibulum euismod felis.
+</p>
+</article>
+
+      
+
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#markers"><strong>Markers</strong></a>
+<ul>
+<li><a href="#usage"><strong>Usage</strong></a>
+<ul>
+<li><a href="#tag-required"><strong>tag</strong> (required)</a></li>
+<li><a href="#max-default-1-0"><strong>max</strong> (default: 1.0)</a></li>
+<li><a href="#limit-default-no-limit"><strong>limit</strong> (default: no limit)</a></li>
+<li><a href="#spread-default-no-spread"><strong>spread</strong> (default: no spread)</a></li>
+</ul></li>
+<li><a href="#overlapping-markers"><strong>Overlapping Markers</strong></a></li>
+<li><a href="#example"><strong>Example</strong></a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

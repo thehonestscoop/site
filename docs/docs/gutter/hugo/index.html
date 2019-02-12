@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hugo shortcodes | The Honest Scoop</title>
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://thehonestscoop.com/normalize.min.css">
+
+<link rel="stylesheet" href="/book.min.9caf26ee2daca225930c0f85fd9eaa9f543aea51e1c0f8096e61e8a6706ae066.css">
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+        <h2 class="book-brand">
+  <a href="https://thehonestscoop.com/">The Honest Scoop</a>
+</h2>
+        
+
+        
+          
+
+
+  
+  
+    
+    
+  
+ 
+  <ul>
+    
+    <li><a href="/docs/gutter/">
+    Gutter</a> 
+  <ul>
+    
+
+    
+    <li>
+      <a href="/docs/gutter/install/">Installation</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/gutter/">The Gutter</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/markers/">Markers</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/hugo/" class="active">Hugo shortcodes</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/faq/">FAQ</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/bounty/">Bounty ($30)</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/license/">License</a>
+    </li>
+    
+  </ul>
+
+    </li>
+    
+
+    
+  </ul>
+
+
+
+
+
+        
+
+        
+      </nav>
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://thehonestscoop.com/svg/menu.svg" />
+  </label>
+  <strong>Hugo shortcodes</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="hugo-shortcodes"><strong>Hugo shortcodes</strong></h1>
+
+<h2 id="what-is-hugo"><strong>What is Hugo?</strong></h2>
+
+<p><a href="https://gohugo.io/">Hugo</a> is a leading static site generator which allows you to generate websites with minimal coding expertise. It is extremely popular for creating high-quality blogs and documentation.</p>
+
+<p><strong>The Gutter</strong> can be easily integrated to Hugo sites, but it does require you to make some minor <em>coding</em> adjustments.</p>
+
+<h2 id="usage"><strong>Usage</strong></h2>
+
+<h3 id="html-template"><strong>HTML Template</strong></h3>
+
+<ol>
+<li>Add the Gutter library to the bottom of the HTML template</li>
+<li>Make sure it is somewhere below the closing <code>&lt;/body&gt;</code> tag.</li>
+</ol>
+
+<p>The HTML template files can be found in the <code>layouts</code> directory.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/@thehonestscoop/gutter@latest&#34;</span> <span style="color:#a6e22e">defer</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
+<ul>
+<li><a href="https://gohugo.io/templates/single-page-templates/">See Single Page Templates</a></li>
+</ul>
+
+<h3 id="create-shortcodes"><strong>Create Shortcodes</strong></h3>
+
+<ol>
+<li>Create shortcodes in <code>layouts/shortcodes</code> directory</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">gutter.html: 
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">parentTag</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">scripts</span>[document.<span style="color:#a6e22e">scripts</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">parentNode</span>;<span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">&#34;ths-gutter&#34;</span>);
+{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;tags&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-tags&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;debug&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-debug&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;placement&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-placement&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;width&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-width&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;color&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-color&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;margin&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-margin&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;resolution&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-resolution&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;gap&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-gap&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;labels&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-labels&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;baseline&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-baseline&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;padding&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-padding&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}{{ <span style="color:#66d9ef">with</span> .<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;merge&#34;</span>}} <span style="color:#a6e22e">parentTag</span>.<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#39;data-merge&#39;</span>, <span style="color:#e6db74">&#39;{{.}}&#39;</span>); {{ <span style="color:#a6e22e">end</span> }}
+&lt;/<span style="color:#f92672">script</span>&gt;
+
+marker.html:
+
+&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ths-marker&#34;</span>
+<span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">with</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Get</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">tag</span><span style="color:#960050;background-color:#1e0010">&#34;}}</span> <span style="color:#a6e22e">data-tag</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{.}}&#34;</span> <span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}</span>
+<span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">with</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Get</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">max</span><span style="color:#960050;background-color:#1e0010">&#34;}}</span> <span style="color:#a6e22e">data-max</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{.}}&#34;</span> <span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}</span>
+<span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">with</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Get</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">limit</span><span style="color:#960050;background-color:#1e0010">&#34;}}</span> <span style="color:#a6e22e">data-limit</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{.}}&#34;</span> <span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}</span>
+<span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">with</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Get</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">spread</span><span style="color:#960050;background-color:#1e0010">&#34;}}</span> <span style="color:#a6e22e">data-spread</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{.}}&#34;</span> <span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}</span>
+&gt;&lt;/<span style="color:#f92672">span</span>&gt;</code></pre></div>
+<ul>
+<li><a href="https://gohugo.io/content-management/shortcodes/">See Shortcodes</a></li>
+</ul>
+
+<h3 id="add-gutter"><strong>Add Gutter</strong></h3>
+
+<p>In your content file (<code>*.md</code>) insert something like this at the top:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{\{&lt; <span style="color:#f92672">gutter</span> <span style="color:#a6e22e">placement</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;left&#34;</span> <span style="color:#a6e22e">color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red,green&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#a6e22e">margin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">padding</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#a6e22e">resolution</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">gap</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">tags</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xxx,zzz&#34;</span> &gt;}}</code></pre></div>
+<p>Read the documentation for more information on the various parameters. You must not prepend the parameters with <code>data-*</code>.</p>
+
+<p>Also remove the <code>\</code> inside the <code>{\{&lt;</code> above.</p>
+
+<h3 id="add-markers"><strong>Add markers</strong></h3>
+
+<p>In your content file (<code>*.md</code>) insert something like this at various points where you want markers:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{\{&lt; <span style="color:#f92672">marker</span> <span style="color:#a6e22e">tag</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;xxx&#34;</span> <span style="color:#a6e22e">max</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100%&#34;</span>  &gt;}}</code></pre></div>
+<p>Read the documentation for more information on the various parameters. You must not prepend the parameters with <code>data-*</code>.</p>
+
+<p>Also remove the <code>\</code> inside the <code>{\{&lt;</code> above.</p>
+
+<h2 id="known-issues"><strong>Known Issues</strong></h2>
+
+<p>If the gutter is affecting your page summary, then either place it lower down or set the summary manually using the front-matter.</p>
+</article>
+
+      
+
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#hugo-shortcodes"><strong>Hugo shortcodes</strong></a>
+<ul>
+<li><a href="#what-is-hugo"><strong>What is Hugo?</strong></a></li>
+<li><a href="#usage"><strong>Usage</strong></a>
+<ul>
+<li><a href="#html-template"><strong>HTML Template</strong></a></li>
+<li><a href="#create-shortcodes"><strong>Create Shortcodes</strong></a></li>
+<li><a href="#add-gutter"><strong>Add Gutter</strong></a></li>
+<li><a href="#add-markers"><strong>Add markers</strong></a></li>
+</ul></li>
+<li><a href="#known-issues"><strong>Known Issues</strong></a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Gutter | The Honest Scoop</title>
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://thehonestscoop.com/normalize.min.css">
+
+<link rel="stylesheet" href="/book.min.9caf26ee2daca225930c0f85fd9eaa9f543aea51e1c0f8096e61e8a6706ae066.css">
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+        <h2 class="book-brand">
+  <a href="https://thehonestscoop.com/">The Honest Scoop</a>
+</h2>
+        
+
+        
+          
+
+
+  
+  
+    
+    
+  
+ 
+  <ul>
+    
+    <li><a href="/docs/gutter/">
+    Gutter</a> 
+  <ul>
+    
+
+    
+    <li>
+      <a href="/docs/gutter/install/">Installation</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/gutter/" class="active">The Gutter</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/markers/">Markers</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/hugo/">Hugo shortcodes</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/faq/">FAQ</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/bounty/">Bounty ($30)</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/license/">License</a>
+    </li>
+    
+  </ul>
+
+    </li>
+    
+
+    
+  </ul>
+
+
+
+
+
+        
+
+        
+      </nav>
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://thehonestscoop.com/svg/menu.svg" />
+  </label>
+  <strong>The Gutter</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="the-gutter"><strong>The Gutter</strong></h1>
+
+<h2 id="usage"><strong>Usage</strong></h2>
+
+<p>A gutter is denoted by using a <code>div</code> tag with a class of <code>ths-gutter</code>. Multiple gutters can co-exist on the same page as long as there is no ancestral relationship (eg. parent-child).</p>
+
+<p>Each gutter will operate independently to each other.</p>
+
+<p>A gutter contains at least 1 strip but may contain more.</p>
+
+<p><strong>You must prefix</strong> each parameter below with <code>data-</code> in the HTML.</p>
+
+<h3 id="tags-required"><strong>tags</strong> (required)</h3>
+
+<p>A <strong>tag</strong> is used to create a strip. At least 1 <code>tag</code> is required.</p>
+
+<p>Multiple tags can be defined by separating using a comma. When inserting <a href="/docs/gutter/markers/">a marker,</a> you must specify which strip the marker belongs to by using the <code>tag</code> parameter.</p>
+
+<h3 id="resolution-default-1"><strong>resolution</strong> (default: 1)</h3>
+
+<p>The <strong>resolution</strong> sets how smoothly the gutter is rendered. The higher the resolution (denoted by a smaller value), the more processing time is required for each render.</p>
+
+<p>The default of 1 pixel means the gutter is split into vertical sections of 1 pixel high for rendering purposes.</p>
+
+<h3 id="merge-default-false"><strong>merge</strong> (default: false)</h3>
+
+<p>The <strong>merge</strong> parameter sets whether or not the strips are combined into 1. If combined, then the first color is used.</p>
+
+<h3 id="width-default-2-5"><strong>width</strong> (default: 2.5)</h3>
+
+<p>The <strong>width</strong> sets the width (in pixels) of each strip.</p>
+
+<h3 id="gap-default-0"><strong>gap</strong> (default: 0)</h3>
+
+<p>The <strong>gap</strong> sets the width (in pixels) of the space in between each strip.</p>
+
+<h3 id="placement-default-lsquo-left-rsquo"><strong>placement</strong> (default: &lsquo;left&rsquo;)</h3>
+
+<p>The <strong>placement</strong> parameter sets whether the gutter is positioned to the <code>left</code> or <code>right</code> of the passage of text.</p>
+
+<h3 id="margin-default-0"><strong>margin</strong> (default: 0)</h3>
+
+<p>The <strong>margin</strong> sets the left-most margin of the gutter (when <code>placement</code> is <code>left</code>) or the right-most margin of the gutter otherwise.</p>
+
+<p>The <code>margin</code> does not influence the positioning of the passage of text. It merely shifts the gutter in the x-direction for aesthetic reasons.</p>
+
+<h3 id="padding-default-0"><strong>padding</strong> (default: 0)</h3>
+
+<p>The <strong>padding</strong> sets the padding of the passage of text.</p>
+
+<p>Although the default <code>padding</code> is 0, for aesthetic reasons it may be wise to make adjustments.</p>
+
+<h3 id="labels"><del><strong>labels</strong></del></h3>
+
+<h3 id="baseline-default-0-s"><strong>baseline</strong> (default: 0&rsquo;s)</h3>
+
+<p>The <strong>baseline</strong> is used to calibrate the shading values of each strip. It is a comma-separated list of decimals (or percentages). Each value in the list corresponds to the <code>tags</code>.</p>
+
+<p>Mathematically, it subtracts from the shading value prior to eventual rendering.</p>
+
+<p>This is an advanced feature that should not be used in ordinary circumstances.</p>
+
+<h3 id="color-default-black"><strong>color</strong> (default: black)</h3>
+
+<p>The <strong>color</strong> parameter is used to set the colors of the strips. It can be a single value or a comma-separated list corresponding to the <code>tags</code>.</p>
+
+<p>If a single value is provided, then all strips will be that color.</p>
+
+<p>The color value can be a predefined HTML color or in <code>#RRGGBB</code> format.</p>
+
+<h3 id="debug"><strong>debug</strong></h3>
+
+<p><strong>debug</strong> is not intended to be used by content creators. It is used by software developers wanting to make modifications to the library.</p>
+
+<p>By enabling <code>debug</code> mode, the results of the sentence detection algorithm will be clearly demonstrated. Further diagnostic information will also be printed to the browser console.</p>
+
+<p>Add the following <code>css</code> code inside the <code>head</code> tag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">style</span>&gt;
+<span style="color:#f92672">span</span>.<span style="color:#a6e22e">ths-sentence</span>:<span style="color:#a6e22e">nth-child</span><span style="color:#f92672">(</span><span style="color:#f92672">even</span><span style="color:#f92672">)</span>{<span style="color:#66d9ef">background-color</span>:LightYellow}.<span style="color:#a6e22e">ths-sentence</span>:<span style="color:#a6e22e">nth-child</span><span style="color:#f92672">(</span><span style="color:#f92672">odd</span><span style="color:#f92672">)</span>{<span style="color:#66d9ef">background-color</span>:Salmon}.<span style="color:#a6e22e">ths-sentence-start</span>{<span style="color:#66d9ef">background-color</span>:Lime}.<span style="color:#a6e22e">ths-sentence-end</span>{<span style="color:#66d9ef">background-color</span>:Aqua}
+&lt;/<span style="color:#f92672">style</span>&gt;</code></pre></div>
+<h2 id="dynamic-fitting"><strong>Dynamic Fitting</strong></h2>
+
+<p>Obviously, the gutter&rsquo;s positioning needs to be adjusted if the structure of the page changes. For a smooth user experience, the gutter will rerender under these circumstances:</p>
+
+<ul>
+<li>When the DOM content is loaded</li>
+<li>500ms after the DOM content is loaded</li>
+<li>After each image on the page loads</li>
+<li>5 seconds after the DOM content is loaded</li>
+<li>50ms after each window resize</li>
+</ul>
+
+<p>If you discover a scenario that you feel should be catered for, please send us <a href="mailto:thehonestscoop@gmail.com">an email</a> as soon as possible.</p>
+
+<h2 id="example"><strong>Example</strong></h2>
+
+<p>
+<strong style="background-color: yellow">&lt;div class="ths-gutter" data-placement='right' data-color="red,blue" data-width="5" data-resolution="1" data-margin="4" data-baseline="0,50%" data-debug=true data-gap="0" data-tags="xxx,zzz"&gt;&lt;/div></strong>
+</p>
+</article>
+
+      
+
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#the-gutter"><strong>The Gutter</strong></a>
+<ul>
+<li><a href="#usage"><strong>Usage</strong></a>
+<ul>
+<li><a href="#tags-required"><strong>tags</strong> (required)</a></li>
+<li><a href="#resolution-default-1"><strong>resolution</strong> (default: 1)</a></li>
+<li><a href="#merge-default-false"><strong>merge</strong> (default: false)</a></li>
+<li><a href="#width-default-2-5"><strong>width</strong> (default: 2.5)</a></li>
+<li><a href="#gap-default-0"><strong>gap</strong> (default: 0)</a></li>
+<li><a href="#placement-default-lsquo-left-rsquo"><strong>placement</strong> (default: &lsquo;left&rsquo;)</a></li>
+<li><a href="#margin-default-0"><strong>margin</strong> (default: 0)</a></li>
+<li><a href="#padding-default-0"><strong>padding</strong> (default: 0)</a></li>
+<li><a href="#labels"><del><strong>labels</strong></del></a></li>
+<li><a href="#baseline-default-0-s"><strong>baseline</strong> (default: 0&rsquo;s)</a></li>
+<li><a href="#color-default-black"><strong>color</strong> (default: black)</a></li>
+<li><a href="#debug"><strong>debug</strong></a></li>
+</ul></li>
+<li><a href="#dynamic-fitting"><strong>Dynamic Fitting</strong></a></li>
+<li><a href="#example"><strong>Example</strong></a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

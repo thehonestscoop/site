@@ -1,8 +1,9 @@
-baseURL = "http://thehonestscoop.com/"
+baseURL = "https://thehonestscoop.com/"
 languageCode = "en-us"
 title = "The Honest Scoop"
 theme = "book"
 pygmentsCodeFences = true
+publishDir = "docs"
 
 [[menu.main]]
   name = "Developers"

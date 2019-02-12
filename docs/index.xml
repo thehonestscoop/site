@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Honest Scoop</title>
+    <link>https://thehonestscoop.com/</link>
+    <description>Recent content on The Honest Scoop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://thehonestscoop.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installation</title>
+      <link>https://thehonestscoop.com/docs/gutter/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/install/</guid>
+      <description>Installation The Gutter is available on npm but the recommended usage is via unpkg unless you have advanced javascript knowledge and you know how to use a bundler.
+&amp;lt;script src=&amp;#34;https://unpkg.com/@thehonestscoop/gutter@latest&amp;#34; defer&amp;gt;&amp;lt;/script&amp;gt; Make sure you insert it below the closing &amp;lt;/body&amp;gt; tag because it is imperative that the script runs after the rest of your page is loaded. Be wary that not all legacy browsers recognize the defer statement.</description>
+    </item>
+    
+    <item>
+      <title>The Gutter</title>
+      <link>https://thehonestscoop.com/docs/gutter/gutter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/gutter/</guid>
+      <description>The Gutter Usage A gutter is denoted by using a div tag with a class of ths-gutter. Multiple gutters can co-exist on the same page as long as there is no ancestral relationship (eg. parent-child).
+Each gutter will operate independently to each other.
+A gutter contains at least 1 strip but may contain more.
+You must prefix each parameter below with data- in the HTML.
+tags (required) A tag is used to create a strip.</description>
+    </item>
+    
+    <item>
+      <title>Markers</title>
+      <link>https://thehonestscoop.com/docs/gutter/markers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/markers/</guid>
+      <description>Markers Usage A marker is denoted by using a span tag with a class of ths-marker. You can place markers within the boundary of any sentence.
+You must prefix each parameter below with data- in the HTML.
+tag (required) The tag denotes to which strip in the gutter the marker belongs to.
+max (default: 1.0) The max signifies the maximum shade in the strip. The maximum shade is always at the position of the marker and is usually 100% unless reduced by the max parameter.</description>
+    </item>
+    
+    <item>
+      <title>Hugo shortcodes</title>
+      <link>https://thehonestscoop.com/docs/gutter/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/hugo/</guid>
+      <description>Hugo shortcodes What is Hugo? Hugo is a leading static site generator which allows you to generate websites with minimal coding expertise. It is extremely popular for creating high-quality blogs and documentation.
+The Gutter can be easily integrated to Hugo sites, but it does require you to make some minor coding adjustments.
+Usage HTML Template  Add the Gutter library to the bottom of the HTML template Make sure it is somewhere below the closing &amp;lt;/body&amp;gt; tag.</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://thehonestscoop.com/docs/gutter/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/faq/</guid>
+      <description>Frequently Asked Questions How can I diagnose potential issues? You can enable debug mode for the gutter. This will clearly showcase the results of the sentence detection algorithm as well as print out various diagnostic details in the browser console. See more info here.
+Can I implement other shading equations other than a standard Bell Curve? At this stage, only a standard Bell Curve is implemented. If there is sufficient demand in the future, it will definitely be possible.</description>
+    </item>
+    
+    <item>
+      <title>Bounty ($30)</title>
+      <link>https://thehonestscoop.com/docs/gutter/bounty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/bounty/</guid>
+      <description>Help improve The Gutter The Gutter uses a very advanced algorithm to accurately detect the demarcation of English sentences. It can be improved further.
+The Task If you are a talented software developer who wants to help improve the efficacy of Democracy, then this task is suitable for you.
+Skills required
+ Javascript Regex Familiarity with the findAndReplaceDOMText project Super smart  The full details can be found here.</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://thehonestscoop.com/docs/gutter/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/license/</guid>
+      <description>License Commercial License Please contact thehonestscoop to discuss commercial licensing options.
+Don&amp;rsquo;t worry. The pricing will be extremely cheap!
+For personal projects, academic journals and non-profit organizations If you want to use an unmodified version of the Gutter library you can do so under the very permissive LGPL license.
+GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. &amp;lt;https://fsf.org/&amp;gt; Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.</description>
+    </item>
+    
+    <item>
+      <title>The Art of Informing</title>
+      <link>https://thehonestscoop.com/why/masslang/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/why/masslang/</guid>
+      <description>You Don&amp;rsquo;t Appreciate What You Got Until It&amp;rsquo;s Gone A free press has long been considered a critical pillar of a well-functioning democracy. With recent events worldwide, it has become more apparent to many that quality journalism is a luxury that cannot be taken for granted. There is no denying that over the recent generations, there has been a gradual degradation of its perceived importance to society.
+As society&amp;rsquo;s value for the institution shrinks either progressively or dramatically, it becomes increasingly more vulnerable to powerful players with opposing interests battering it beyond repair.</description>
+    </item>
+    
+    <item>
+      <title>Why use The Gutter?</title>
+      <link>https://thehonestscoop.com/why/gutter/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/why/gutter/</guid>
+      <description>The futuristic film The Minority Report features Tom Cruise as the head of the PreCrime division. The division has the technology to determine ahead of time whether someone is about to commit a crime. The division&amp;rsquo;s patrolmen assemble at the location when the crime is expected to occur to arrest the &amp;ldquo;perpetrator.&amp;rdquo; Tom Cruise&amp;rsquo;s character (and the general population) have full faith in the system. His beliefs reach an impasse when the technology predicts that he will &amp;mdash; within 36 hours &amp;mdash; murder a man named Leo Crow, whom he does not know.</description>
+    </item>
+    
+    <item>
+      <title>James Watson Had a Chance to Salvage His Reputation on Race. He Made Things Worse.</title>
+      <link>https://thehonestscoop.com/why/nyt/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/why/nyt/</guid>
+      <description>The Nobel-winning biologist has drawn global criticism with unfounded pronouncements on genetics, race and intelligence. He still thinks he’s right, a new documentary finds. It has been more than a decade since James D. Watson, a founder of modern genetics, landed in a kind of professional exile by suggesting that black people are intrinsically less intelligent than whites.
+In 2007, Dr. Watson, who shared a 1962 Nobel Prize for describing the double-helix structure of DNA, told a British  journalist that he was “inherently gloomy about the prospect of Africa” because “all our social policies are based on the fact that their intelligence is the same as ours, whereas all the testing says, not really.</description>
+    </item>
+    
+    <item>
+      <title>The Mission</title>
+      <link>https://thehonestscoop.com/why/mission/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/why/mission/</guid>
+      <description>The ultimate aim of The Honest Scoop is to improve the quality of journalism to the theoretical limit. The project is currently in its infancy. I am still exploring its future direction.
+We are looking for software developers and journalists to contribute to the project. The project will be heavily focused on using technology to improve the standard of journalism in an objective way.
+You can contact me at thehonestscoop@gmail.</description>
+    </item>
+    
+  </channel>
+</rss>

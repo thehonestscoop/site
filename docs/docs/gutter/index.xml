@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gutter on The Honest Scoop</title>
+    <link>https://thehonestscoop.com/docs/gutter/</link>
+    <description>Recent content in Gutter on The Honest Scoop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://thehonestscoop.com/docs/gutter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installation</title>
+      <link>https://thehonestscoop.com/docs/gutter/install/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/install/</guid>
+      <description>Installation The Gutter is available on npm but the recommended usage is via unpkg unless you have advanced javascript knowledge and you know how to use a bundler.
+&amp;lt;script src=&amp;#34;https://unpkg.com/@thehonestscoop/gutter@latest&amp;#34; defer&amp;gt;&amp;lt;/script&amp;gt; Make sure you insert it below the closing &amp;lt;/body&amp;gt; tag because it is imperative that the script runs after the rest of your page is loaded. Be wary that not all legacy browsers recognize the defer statement.</description>
+    </item>
+    
+    <item>
+      <title>The Gutter</title>
+      <link>https://thehonestscoop.com/docs/gutter/gutter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/gutter/</guid>
+      <description>The Gutter Usage A gutter is denoted by using a div tag with a class of ths-gutter. Multiple gutters can co-exist on the same page as long as there is no ancestral relationship (eg. parent-child).
+Each gutter will operate independently to each other.
+A gutter contains at least 1 strip but may contain more.
+You must prefix each parameter below with data- in the HTML.
+tags (required) A tag is used to create a strip.</description>
+    </item>
+    
+    <item>
+      <title>Markers</title>
+      <link>https://thehonestscoop.com/docs/gutter/markers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/markers/</guid>
+      <description>Markers Usage A marker is denoted by using a span tag with a class of ths-marker. You can place markers within the boundary of any sentence.
+You must prefix each parameter below with data- in the HTML.
+tag (required) The tag denotes to which strip in the gutter the marker belongs to.
+max (default: 1.0) The max signifies the maximum shade in the strip. The maximum shade is always at the position of the marker and is usually 100% unless reduced by the max parameter.</description>
+    </item>
+    
+    <item>
+      <title>Hugo shortcodes</title>
+      <link>https://thehonestscoop.com/docs/gutter/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/hugo/</guid>
+      <description>Hugo shortcodes What is Hugo? Hugo is a leading static site generator which allows you to generate websites with minimal coding expertise. It is extremely popular for creating high-quality blogs and documentation.
+The Gutter can be easily integrated to Hugo sites, but it does require you to make some minor coding adjustments.
+Usage HTML Template  Add the Gutter library to the bottom of the HTML template Make sure it is somewhere below the closing &amp;lt;/body&amp;gt; tag.</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://thehonestscoop.com/docs/gutter/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/faq/</guid>
+      <description>Frequently Asked Questions How can I diagnose potential issues? You can enable debug mode for the gutter. This will clearly showcase the results of the sentence detection algorithm as well as print out various diagnostic details in the browser console. See more info here.
+Can I implement other shading equations other than a standard Bell Curve? At this stage, only a standard Bell Curve is implemented. If there is sufficient demand in the future, it will definitely be possible.</description>
+    </item>
+    
+    <item>
+      <title>Bounty ($30)</title>
+      <link>https://thehonestscoop.com/docs/gutter/bounty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/bounty/</guid>
+      <description>Help improve The Gutter The Gutter uses a very advanced algorithm to accurately detect the demarcation of English sentences. It can be improved further.
+The Task If you are a talented software developer who wants to help improve the efficacy of Democracy, then this task is suitable for you.
+Skills required
+ Javascript Regex Familiarity with the findAndReplaceDOMText project Super smart  The full details can be found here.</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://thehonestscoop.com/docs/gutter/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/gutter/license/</guid>
+      <description>License Commercial License Please contact thehonestscoop to discuss commercial licensing options.
+Don&amp;rsquo;t worry. The pricing will be extremely cheap!
+For personal projects, academic journals and non-profit organizations If you want to use an unmodified version of the Gutter library you can do so under the very permissive LGPL license.
+GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. &amp;lt;https://fsf.org/&amp;gt; Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.</description>
+    </item>
+    
+  </channel>
+</rss>

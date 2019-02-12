@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/gutter/install/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/gutter/gutter/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/gutter/markers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/gutter/hugo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/gutter/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/gutter/bounty/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/gutter/license/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/why/masslang/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/why/gutter/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/why/nyt/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/why/mission/</loc>
+    <lastmod>2018-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/why/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/gutter/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
