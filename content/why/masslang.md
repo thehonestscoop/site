@@ -105,16 +105,6 @@ It may be the case that your calibration is way off. Perhaps your family is far 
 
 Just remember that if your article puts too much pressure on them to digest: your article, their opinion of you and your reputation will always end second best.
 
-In essence, when you are juggling between two words, ask yourself which words is more accessible. When you are deciding whether to flesh out an argument in more detail, then ask yourself if the complexity will effect accessibility.
-
-
--------------
-
-When you are juggling between two words, ask yourself which word is more accessible to the &ldquo;average person.&rdquo; When you are deciding if an argument should be fleshed out in more detail when you know it would increase complexity, again ask yourself the same question.
-
---------------
-
-
 ## Exceptions
 
 There are times when explicitly rejecting these principles is prudent. The obvious scenario is when the target audience **is not** the general population. If that's the case, the principles never really applied in the first place.
