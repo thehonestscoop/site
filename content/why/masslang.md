@@ -34,7 +34,7 @@ When the target audience is the general population &mdash; whether you are writi
 
 Always use common words that everyone is familiar with. Don't use the word _automobile_ to mean the more familiar term _car_.
 
-Always use simpler less-sophisticated words over more complicated words - even if the word does not capture 100% of the intended meaning or connotation.
+Always use simpler less-sophisticated words over more complicated words &mdash; even if the word does not capture 100% of the intended meaning or connotation.
 
 Don't try to show off your vast vocabulary. Not only does your article become more inaccessible, but you also come off as _potentially_ pretentious and less relatable. 
 

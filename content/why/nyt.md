@@ -44,7 +44,9 @@ In response to questions from The Times, Dr. Francis Collins, the director of th
 
 [― Full NYT Artice ―](https://www.nytimes.com/2019/01/01/science/watson-dna-genetics-race.html)
 
-This article is an excerpt from the New York Times. It highlights how the gutter would work to enhance the reader's experience. I make no attempt to judge the merits of the author's opinion or the subject's opinion. I make no attempt to judge the _quality_ of journalism.
+---
+
+This article is an excerpt from the New York Times. It highlights how The Gutter would work to enhance the reader's experience. I make no attempt to judge the merits of the author's opinion or the subject's opinion. I make no attempt to judge the _quality_ of journalism.
 
 If you resize the browser window, you will see it adapt. You can see that the black strip warns the reader to brace themselves for something that is potentially offensive. The red strip advises the reader of segments that potentially place enormous pressure on their &ldquo;mass-model.&rdquo;
 
