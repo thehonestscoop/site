@@ -11,6 +11,11 @@ bookShowToc: false
 
 https://github.com/thehonestscoop/gutter
 
+## Lemma-Chain
+
+https://github.com/thehonestscoop/lemma-chain
+
+
 ## findAndReplaceDOMText
 
 https://github.com/thehonestscoop/findAndReplaceDOMText
