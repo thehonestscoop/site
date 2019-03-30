@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Source Code | The Honest Scoop</title>
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://thehonestscoop.com/normalize.min.css">
+
+<link rel="stylesheet" href="/book.min.9caf26ee2daca225930c0f85fd9eaa9f543aea51e1c0f8096e61e8a6706ae066.css">
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+        <h2 class="book-brand">
+  <a href="https://thehonestscoop.com/">The Honest Scoop</a>
+</h2>
+        
+
+        
+          
+
+
+  
+  
+    
+    
+  
+ 
+  <ul>
+    
+    <li><a href="/docs/gutter/">
+    Gutter</a> 
+  <ul>
+    
+
+    
+    <li>
+      <a href="/docs/gutter/install/">Installation</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/gutter/">The Gutter</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/markers/">Markers</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/hugo/">Hugo shortcodes</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/faq/">FAQ</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/bounty/">Bounty ($30)</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/license/">License</a>
+    </li>
+    
+  </ul>
+
+    </li>
+    
+    <li><a href="/docs/lemma-chain/">
+    Lemma Chain</a> 
+  <ul>
+    
+
+    
+    <li>
+      <a href="/docs/lemma-chain/use-cases/">Use Cases</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/account/">Accounts</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/refs/">References</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/search/">Search</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/authentication/">Authentication</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/rate_limit/">Rate Limit</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/source/" class="active">Source Code</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/license/">License</a>
+    </li>
+    
+  </ul>
+
+    </li>
+    
+
+    
+  </ul>
+
+
+
+
+
+        
+
+        
+      </nav>
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://thehonestscoop.com/svg/menu.svg" />
+  </label>
+  <strong>Source Code</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="source-code"><strong>Source Code</strong></h1>
+
+<p>The source code is openly available. It is programmed in Go 1.11+.</p>
+
+<h2 id="dependencies"><strong>Dependencies</strong></h2>
+
+<p><a href="https://github.com/dgraph-io/dgraph">DGraph 1.1+</a> is a performant, developer-friendly graph database.</p>
+
+<h2 id="repository"><strong>Repository</strong></h2>
+
+<p><a href="https://github.com/thehonestscoop/lemma-chain">https://github.com/thehonestscoop/lemma-chain</a></p>
+
+<h2 id="configuration"><strong>Configuration</strong></h2>
+
+<p>All configuration values are set via Environment Variables.</p>
+
+<h3 id="hashid-salt">HASHID_SALT</h3>
+
+<p>A random string used to create unique identifiers. Once set in production, it must not be modified.</p>
+
+<h3 id="max-payload-kb-default-12kb">MAX_PAYLOAD_KB (default: 12kB)</h3>
+
+<p>Each reference can store associated custom JSON data. This parameter sets the maximum size of the payload in kilobytes.</p>
+
+<h3 id="behind-proxy-default-0">BEHIND_PROXY (default: 0)</h3>
+
+<p>If the application sits behind a proxy, set to 1.</p>
+
+<h3 id="query-timeout-default-300ms">QUERY_TIMEOUT (default: 300ms)</h3>
+
+<p>To prevent abuse of the service, a timeout (in ms) can be set.</p>
+
+<h3 id="cache-duration-default-15">CACHE_DURATION (default: 15)</h3>
+
+<p>Results to <code>GET</code> endpoints are cached for a duration (in seconds) based on this setting.</p>
+
+<h3 id="rate-limit-default-1-0">RATE_LIMIT (default 1.0)</h3>
+
+<p>To prevent abuse of the service, a maximum number of requests per second per IP address can be set.</p>
+
+<h3 id="recaptcha-secret">RECAPTCHA_SECRET</h3>
+
+<p>All <code>POST</code> requests require passing <a href="https://www.google.com/recaptcha/intro/v3.html">Google recaptcha</a> validation. You can set your recaptcha secret here. The default value allows all requests to pass validation.</p>
+</article>
+
+      
+
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#source-code"><strong>Source Code</strong></a>
+<ul>
+<li><a href="#dependencies"><strong>Dependencies</strong></a></li>
+<li><a href="#repository"><strong>Repository</strong></a></li>
+<li><a href="#configuration"><strong>Configuration</strong></a>
+<ul>
+<li><a href="#hashid-salt">HASHID_SALT</a></li>
+<li><a href="#max-payload-kb-default-12kb">MAX_PAYLOAD_KB (default: 12kB)</a></li>
+<li><a href="#behind-proxy-default-0">BEHIND_PROXY (default: 0)</a></li>
+<li><a href="#query-timeout-default-300ms">QUERY_TIMEOUT (default: 300ms)</a></li>
+<li><a href="#cache-duration-default-15">CACHE_DURATION (default: 15)</a></li>
+<li><a href="#rate-limit-default-1-0">RATE_LIMIT (default 1.0)</a></li>
+<li><a href="#recaptcha-secret">RECAPTCHA_SECRET</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

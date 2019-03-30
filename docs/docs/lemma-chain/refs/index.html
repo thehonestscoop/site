@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>References | The Honest Scoop</title>
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://thehonestscoop.com/normalize.min.css">
+
+<link rel="stylesheet" href="/book.min.9caf26ee2daca225930c0f85fd9eaa9f543aea51e1c0f8096e61e8a6706ae066.css">
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+        <h2 class="book-brand">
+  <a href="https://thehonestscoop.com/">The Honest Scoop</a>
+</h2>
+        
+
+        
+          
+
+
+  
+  
+    
+    
+  
+ 
+  <ul>
+    
+    <li><a href="/docs/gutter/">
+    Gutter</a> 
+  <ul>
+    
+
+    
+    <li>
+      <a href="/docs/gutter/install/">Installation</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/gutter/">The Gutter</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/markers/">Markers</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/hugo/">Hugo shortcodes</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/faq/">FAQ</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/bounty/">Bounty ($30)</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/license/">License</a>
+    </li>
+    
+  </ul>
+
+    </li>
+    
+    <li><a href="/docs/lemma-chain/">
+    Lemma Chain</a> 
+  <ul>
+    
+
+    
+    <li>
+      <a href="/docs/lemma-chain/use-cases/">Use Cases</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/account/">Accounts</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/refs/" class="active">References</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/search/">Search</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/authentication/">Authentication</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/rate_limit/">Rate Limit</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/source/">Source Code</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/license/">License</a>
+    </li>
+    
+  </ul>
+
+    </li>
+    
+
+    
+  </ul>
+
+
+
+
+
+        
+
+        
+      </nav>
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://thehonestscoop.com/svg/menu.svg" />
+  </label>
+  <strong>References</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="references"><strong>References</strong></h1>
+
+<p>A reference is the primary data entity. It can hold custom arbitrary data in the form of a JSON object. The reference can be located using the <code>GET /:ref</code> endpoint.</p>
+
+<h2 id="create"><strong>Create</strong></h2>
+
+<p><code>POST https://lemma-chain.thehonestscoop.com/ref</code></p>
+
+<h3 id="owner-optional"><strong>owner</strong>  (optional)</h3>
+
+<p>The <strong>owner</strong> parameter sets the account name of the prospective reference. If unset, the reference will be &lsquo;unowned&rsquo; by an account. If set, the account owner must be currently <a href="/docs/lemma-chain/authentication/">authenticated</a>.</p>
+
+<h3 id="parents-optional"><strong>parents</strong>  (optional)</h3>
+
+<p><strong>parents</strong> are other references that the prospective reference links to. It accepts an array of strings where the first part is the <code>ref type</code>. This can be an arbitrary tag. It is followed by a <code>:</code> and then the identifier of the other reference.</p>
+
+<p>Each reference can have up to 100 parent refs.</p>
+
+<h3 id="data-required"><strong>data</strong>  (required)</h3>
+
+<p>The <strong>data</strong> parameter is used to store arbitrary custom data associated with the reference. Each reference must contain some data - even if it is an empty JSON object. It must be a string containing a JSON payload. It can contain at most <strong>12kB</strong> of data.</p>
+
+<h3 id="searchable-optional"><strong>searchable</strong>  (optional)</h3>
+
+<p>When <strong>searchable</strong> is set, the reference can be discovered by the <a href="/docs/lemma-chain/search/">search</a> endpoint. The default value is false.</p>
+
+<h3 id="search-title-and-search-synopsis-optional"><strong>search_title</strong> and  <strong>search_synopsis</strong> (optional)</h3>
+
+<p>The <strong>search_title</strong> and <strong>search_synopsis</strong> are used to provide extra details to help the <a href="/docs/lemma-chain/search/">search</a> endpoint understand the content of the reference. When <strong>searchable</strong> is set to true, <strong>search_title</strong> and/or <strong>search_synopsis</strong> is required.</p>
+
+<p>The <strong>search_title</strong> must be a title containing less than <strong>100</strong> characters. The <strong>search_synopsis</strong> is more descriptive and must contain less than <strong>800</strong> characters.</p>
+
+<p>An example request:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+	<span style="color:#f92672">&#34;owner&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+	<span style="color:#f92672">&#34;parents&#34;</span>: [<span style="color:#e6db74">&#34;required:@alpha/redsss242&#34;</span>, <span style="color:#e6db74">&#34;recommended:mnn2sdew76&#34;</span>],
+	<span style="color:#f92672">&#34;data&#34;</span>: <span style="color:#e6db74">&#34;{\&#34;custom_data\&#34;: \&#34;abcdef\&#34;}&#34;</span>,
+	<span style="color:#f92672">&#34;searchable&#34;</span>: <span style="color:#66d9ef">true</span>,
+	<span style="color:#f92672">&#34;search_title&#34;</span>: <span style="color:#e6db74">&#34;A book title&#34;</span>,
+	<span style="color:#f92672">&#34;search_synopsis&#34;</span>: <span style="color:#e6db74">&#34;The blurb of the book&#34;</span>,
+	<span style="color:#f92672">&#34;recaptcha_code&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>
+}</code></pre></div>
+<h2 id="find-a-ref-and-all-its-parents"><strong>Find a ref and all its parents</strong></h2>
+
+<p><code>GET https://lemma-chain.thehonestscoop.com/:ref?depth=x&amp;types=a,b</code></p>
+
+<p>This endpoint has a max query duration of 300ms. If the query takes longer, then a 408 Status code is returned. The results of this endpoint are cached for 15 minutes.</p>
+
+<h3 id="depth-optional"><strong>depth</strong>  (optional)</h3>
+
+<p>Since each reference can link to multiple other parent references, which can each link to multiple other parent references, the <strong>depth</strong> parameter sets a limit to the recursion.</p>
+
+<p>In most cases, the <strong>depth</strong> parameter should be unset since you want the full chain of references returned.</p>
+
+<h3 id="types-optional"><strong>types</strong>  (optional)</h3>
+
+<p>The <strong>types</strong> parameter is a comma-delimited list of <code>ref types</code> that you want to filter for. In common use cases, you want all <code>ref types</code> returned.</p>
+
+<p><strong>NOTE:</strong> The custom JSON data is expanded out in the response. In all other endpoints, the response returns the data as a JSON-encoded string.</p>
+
+<p>An example response:</p>
+
+<p><code>GET https://lemma-chain.thehonestscoop.com/23js45tbtl4?types=required,recommended</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;refs&#34;</span>: [
+    {
+      <span style="color:#f92672">&#34;data&#34;</span>: {
+      },
+      <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;y2zsbpt8tdd&#34;</span>,
+      <span style="color:#f92672">&#34;ref_type&#34;</span>: <span style="color:#e6db74">&#34;recommended&#34;</span>
+    },
+    {
+      <span style="color:#f92672">&#34;data&#34;</span>: {
+        <span style="color:#f92672">&#34;Title&#34;</span>: <span style="color:#e6db74">&#34;required reading&#34;</span>
+      },
+      <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;@beta/p8rsy7tjt7y&#34;</span>,
+      <span style="color:#f92672">&#34;ref_type&#34;</span>: <span style="color:#e6db74">&#34;required&#34;</span>,
+      <span style="color:#f92672">&#34;refs&#34;</span>: [
+        {
+          <span style="color:#f92672">&#34;data&#34;</span>: {
+            <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Dictionary&#34;</span>
+          },
+          <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;@alpha/9v7s4gtgt9&#34;</span>,
+          <span style="color:#f92672">&#34;ref_type&#34;</span>: <span style="color:#e6db74">&#34;required&#34;</span>
+        },
+        {
+          <span style="color:#f92672">&#34;data&#34;</span>: {
+            <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;The Bible&#34;</span>
+          },
+          <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;@alpha/43rsyjtzt8&#34;</span>,
+          <span style="color:#f92672">&#34;ref_type&#34;</span>: <span style="color:#e6db74">&#34;recommended&#34;</span>
+        }
+      ]
+    }
+  ]
+}</code></pre></div></article>
+
+      
+
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#references"><strong>References</strong></a>
+<ul>
+<li><a href="#create"><strong>Create</strong></a>
+<ul>
+<li><a href="#owner-optional"><strong>owner</strong>  (optional)</a></li>
+<li><a href="#parents-optional"><strong>parents</strong>  (optional)</a></li>
+<li><a href="#data-required"><strong>data</strong>  (required)</a></li>
+<li><a href="#searchable-optional"><strong>searchable</strong>  (optional)</a></li>
+<li><a href="#search-title-and-search-synopsis-optional"><strong>search_title</strong> and  <strong>search_synopsis</strong> (optional)</a></li>
+</ul></li>
+<li><a href="#find-a-ref-and-all-its-parents"><strong>Find a ref and all its parents</strong></a>
+<ul>
+<li><a href="#depth-optional"><strong>depth</strong>  (optional)</a></li>
+<li><a href="#types-optional"><strong>types</strong>  (optional)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

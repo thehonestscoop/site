@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lemma Chain on The Honest Scoop</title>
+    <link>https://thehonestscoop.com/docs/lemma-chain/</link>
+    <description>Recent content in Lemma Chain on The Honest Scoop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://thehonestscoop.com/docs/lemma-chain/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use Cases</title>
+      <link>https://thehonestscoop.com/docs/lemma-chain/use-cases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/lemma-chain/use-cases/</guid>
+      <description>Some Use Cases Academic Citations Most, if not all, academic articles reference other articles and books as citations. Lemma-Chain can be used to encode the &amp;ldquo;chain of citations.&amp;rdquo; Furthermore, citations can be marked as &amp;lsquo;required&amp;rsquo; or &amp;lsquo;suggested&amp;rsquo; reading.
+Legal Precedents In common-law legal systems, Courts are expected to follow the precedents set by prior decisions. These precedents can be categorized as either &amp;lsquo;binding&amp;rsquo; or &amp;lsquo;persuasive.&amp;rsquo; Lemma-Chain can be used to encode the cited cases in court judgments.</description>
+    </item>
+    
+    <item>
+      <title>Accounts</title>
+      <link>https://thehonestscoop.com/docs/lemma-chain/account/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/lemma-chain/account/</guid>
+      <description>Accounts A reference can be unowned owned by an account. The advantage of creating a registered account is that all references created under the account can be listed together.
+Each account must have a unique name. Once created, the name will be prepended with a @. Each account must also be registered with a unique non-disposable email address.
+Create POST https://lemma-chain.thehonestscoop.com/accounts
+An account name must not contain @, / and white-spaces.</description>
+    </item>
+    
+    <item>
+      <title>References</title>
+      <link>https://thehonestscoop.com/docs/lemma-chain/refs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/lemma-chain/refs/</guid>
+      <description>References A reference is the primary data entity. It can hold custom arbitrary data in the form of a JSON object. The reference can be located using the GET /:ref endpoint.
+Create POST https://lemma-chain.thehonestscoop.com/ref
+owner (optional) The owner parameter sets the account name of the prospective reference. If unset, the reference will be &amp;lsquo;unowned&amp;rsquo; by an account. If set, the account owner must be currently authenticated.
+parents (optional) parents are other references that the prospective reference links to.</description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://thehonestscoop.com/docs/lemma-chain/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/lemma-chain/search/</guid>
+      <description>Search GET https://lemma-chain.thehonestscoop.com/search/:terms
+All references that are set to &amp;lsquo;searchable&amp;rsquo; are potentially discoverable by the search endpoint. The search_title and search_synopsis fields are used to find relevant references.
+This endpoint has a max query duration of 300ms. If the query takes longer, then a 408 Status code is returned. The results of this endpoint are cached for 15 minutes.
+NOTE: Characters such as ? require encoding to prevent interpretation as query parameters.</description>
+    </item>
+    
+    <item>
+      <title>Authentication</title>
+      <link>https://thehonestscoop.com/docs/lemma-chain/authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/lemma-chain/authentication/</guid>
+      <description>Authentication The request must be authenticated to:
+ Create a reference owned by an account List all references owned by an account (instead of just searchable references)  Request Headers The HTTP request must contain these custom headers.
+X-AUTH-ACCOUNT The account&amp;rsquo;s name or associated email address.
+X-AUTH-PASSWORD The account&amp;rsquo;s password.
+Response  If authentication fails, a 401 Status Code is returned with no accompanying error message. If the account&amp;rsquo;s associated email address hasn&amp;rsquo;t been verified, a 401 Status Code is returned along with an error message explaining the reason.</description>
+    </item>
+    
+    <item>
+      <title>Rate Limit</title>
+      <link>https://thehonestscoop.com/docs/lemma-chain/rate_limit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/lemma-chain/rate_limit/</guid>
+      <description>Rate Limit To prevent abuse of the service, only 4 requests per second is permitted per IP address.</description>
+    </item>
+    
+    <item>
+      <title>Source Code</title>
+      <link>https://thehonestscoop.com/docs/lemma-chain/source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/lemma-chain/source/</guid>
+      <description>Source Code The source code is openly available. It is programmed in Go 1.11+.
+Dependencies DGraph 1.1+ is a performant, developer-friendly graph database.
+Repository https://github.com/thehonestscoop/lemma-chain
+Configuration All configuration values are set via Environment Variables.
+HASHID_SALT A random string used to create unique identifiers. Once set in production, it must not be modified.
+MAX_PAYLOAD_KB (default: 12kB) Each reference can store associated custom JSON data. This parameter sets the maximum size of the payload in kilobytes.</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://thehonestscoop.com/docs/lemma-chain/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thehonestscoop.com/docs/lemma-chain/license/</guid>
+      <description>License If you want to use an unmodified version of Lemma-Chain you can do so under the very permissive LGPL license.
+GNU LESSER GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. &amp;lt;https://fsf.org/&amp;gt; Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed. This version of the GNU Lesser General Public License incorporates the terms and conditions of version 3 of the GNU General Public License, supplemented by the additional permissions listed below.</description>
+    </item>
+    
+  </channel>
+</rss>

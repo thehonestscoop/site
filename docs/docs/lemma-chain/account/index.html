@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accounts | The Honest Scoop</title>
+
+<link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://thehonestscoop.com/normalize.min.css">
+
+<link rel="stylesheet" href="/book.min.9caf26ee2daca225930c0f85fd9eaa9f543aea51e1c0f8096e61e8a6706ae066.css">
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav role="navigation">
+        <h2 class="book-brand">
+  <a href="https://thehonestscoop.com/">The Honest Scoop</a>
+</h2>
+        
+
+        
+          
+
+
+  
+  
+    
+    
+  
+ 
+  <ul>
+    
+    <li><a href="/docs/gutter/">
+    Gutter</a> 
+  <ul>
+    
+
+    
+    <li>
+      <a href="/docs/gutter/install/">Installation</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/gutter/">The Gutter</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/markers/">Markers</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/hugo/">Hugo shortcodes</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/faq/">FAQ</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/bounty/">Bounty ($30)</a>
+    </li>
+    
+    <li>
+      <a href="/docs/gutter/license/">License</a>
+    </li>
+    
+  </ul>
+
+    </li>
+    
+    <li><a href="/docs/lemma-chain/">
+    Lemma Chain</a> 
+  <ul>
+    
+
+    
+    <li>
+      <a href="/docs/lemma-chain/use-cases/">Use Cases</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/account/" class="active">Accounts</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/refs/">References</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/search/">Search</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/authentication/">Authentication</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/rate_limit/">Rate Limit</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/source/">Source Code</a>
+    </li>
+    
+    <li>
+      <a href="/docs/lemma-chain/license/">License</a>
+    </li>
+    
+  </ul>
+
+    </li>
+    
+
+    
+  </ul>
+
+
+
+
+
+        
+
+        
+      </nav>
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="https://thehonestscoop.com/svg/menu.svg" />
+  </label>
+  <strong>Accounts</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="accounts"><strong>Accounts</strong></h1>
+
+<p>A reference can be unowned owned by an account. The advantage of creating a registered account is that all references created under the account can be listed together.</p>
+
+<p>Each account must have a unique name. Once created, the name will be prepended with a <code>@</code>. Each account must also be registered with a unique non-disposable email address.</p>
+
+<h2 id="create"><strong>Create</strong></h2>
+
+<p><code>POST https://lemma-chain.thehonestscoop.com/accounts</code></p>
+
+<p>An account name must not contain <code>@</code>, <code>/</code> and white-spaces. It must also be less than 50 characters long.</p>
+
+<p>An example request:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+	<span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;alpha&#34;</span>,
+	<span style="color:#f92672">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;test@gmail.com&#34;</span>,
+	<span style="color:#f92672">&#34;password_1&#34;</span>: <span style="color:#e6db74">&#34;password123&#34;</span>,
+	<span style="color:#f92672">&#34;password_2&#34;</span>: <span style="color:#e6db74">&#34;password123&#34;</span>,
+	<span style="color:#f92672">&#34;recaptcha_code&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>
+}</code></pre></div>
+<p>There are various validation rules in place. The HTML form used for account creation must submit 2 identical passwords to satisfy validation.</p>
+
+<p>If any validation fails, an error message will be returned.
+If account creation is successful, a 200 Status code is returned.</p>
+
+<h2 id="list-references"><strong>List References</strong></h2>
+
+<p><code>GET https://lemma-chain.thehonestscoop.com/accounts/:name</code></p>
+
+<p>All references owned by the <code>:name</code> will be listed provided that account owner is currently <a href="/docs/lemma-chain/authentication/">authenticated</a> for the request. If the owner is not authenticated, the <code>email</code> information will not be revealed.  Only <code>searchable</code> references will be listed.</p>
+
+<p>An example response:</p>
+
+<p><code>GET https://lemma-chain.thehonestscoop.com/accounts/alpha</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;@alpha&#34;</span>,
+  <span style="color:#f92672">&#34;email&#34;</span>: <span style="color:#e6db74">&#34;alpha@gmail.com&#34;</span>,
+  <span style="color:#f92672">&#34;refs&#34;</span>: [
+    {
+      <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;@alpha/43rsyjtzt8&#34;</span>,
+      <span style="color:#f92672">&#34;data&#34;</span>: <span style="color:#e6db74">&#34;{\&#34;title\&#34;:\&#34;The Bible\&#34;}&#34;</span>,
+      <span style="color:#f92672">&#34;searchable&#34;</span>: <span style="color:#66d9ef">true</span>,
+      <span style="color:#f92672">&#34;search_title&#34;</span>: <span style="color:#e6db74">&#34;Bible&#34;</span>,
+      <span style="color:#f92672">&#34;search_synopsis&#34;</span>: <span style="color:#e6db74">&#34;most popular religious text&#34;</span>,
+      <span style="color:#f92672">&#34;created_at&#34;</span>: <span style="color:#e6db74">&#34;2019-03-25T07:40:30.284795+11:00&#34;</span>
+    },
+    {
+      <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;@alpha/9v7s4gtgt9&#34;</span>,
+      <span style="color:#f92672">&#34;data&#34;</span>: <span style="color:#e6db74">&#34;{\&#34;title\&#34;:\&#34;Dictionary\&#34;}&#34;</span>,
+      <span style="color:#f92672">&#34;searchable&#34;</span>: <span style="color:#66d9ef">true</span>,
+      <span style="color:#f92672">&#34;search_title&#34;</span>: <span style="color:#e6db74">&#34;common book&#34;</span>,
+      <span style="color:#f92672">&#34;search_synopsis&#34;</span>: <span style="color:#e6db74">&#34;you can check definitions&#34;</span>,
+      <span style="color:#f92672">&#34;created_at&#34;</span>: <span style="color:#e6db74">&#34;2019-03-25T07:39:45.714502+11:00&#34;</span>
+    }
+  ]
+}</code></pre></div></article>
+
+      
+
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#accounts"><strong>Accounts</strong></a>
+<ul>
+<li><a href="#create"><strong>Create</strong></a></li>
+<li><a href="#list-references"><strong>List References</strong></a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+
+  
+  
+</body>
+
+</html>

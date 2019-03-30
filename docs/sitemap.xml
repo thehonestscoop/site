@@ -11,6 +11,14 @@
   </url>
   
   <url>
+    <loc>https://thehonestscoop.com/docs/lemma-chain/use-cases/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/lemma-chain/account/</loc>
+  </url>
+  
+  <url>
     <loc>https://thehonestscoop.com/docs/gutter/markers/</loc>
   </url>
   
@@ -19,7 +27,19 @@
   </url>
   
   <url>
+    <loc>https://thehonestscoop.com/docs/lemma-chain/refs/</loc>
+  </url>
+  
+  <url>
     <loc>https://thehonestscoop.com/docs/gutter/faq/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/lemma-chain/search/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/lemma-chain/authentication/</loc>
   </url>
   
   <url>
@@ -28,6 +48,18 @@
   
   <url>
     <loc>https://thehonestscoop.com/docs/gutter/license/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/lemma-chain/rate_limit/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/lemma-chain/source/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/lemma-chain/license/</loc>
   </url>
   
   <url>
@@ -62,6 +94,10 @@
   
   <url>
     <loc>https://thehonestscoop.com/docs/gutter/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thehonestscoop.com/docs/lemma-chain/</loc>
   </url>
   
   <url>
