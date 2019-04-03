@@ -26,7 +26,7 @@ All configuration values are set via Environment Variables.
 A random string used to create unique identifiers. Once set in production, it must not be modified.
 
 
-### MAX_PAYLOAD_KB (default: 12kB)
+### MAX_PAYLOAD_KB (default: 12)
 
 Each reference can store associated custom JSON data. This parameter sets the maximum size of the payload in kilobytes.
 
@@ -41,7 +41,7 @@ To prevent abuse of the service, a timeout (in ms) can be set.
 
 ### CACHE_DURATION (default: 15)
 
-Results to `GET` endpoints are cached for a duration (in seconds) based on this setting.
+Results of `GET` endpoints are cached for a duration (in minutes) based on this setting.
 
 ### RATE_LIMIT (default 1.0)
 
