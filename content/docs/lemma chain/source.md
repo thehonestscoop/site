@@ -43,7 +43,7 @@ To prevent abuse of the service, a timeout (in ms) can be set.
 
 Results of `GET` endpoints are cached for a duration (in minutes) based on this setting.
 
-### RATE_LIMIT (default 1.0)
+### RATE_LIMIT (default 4.0)
 
 To prevent abuse of the service, a maximum number of requests per second per IP address can be set.
 
