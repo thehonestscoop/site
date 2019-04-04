@@ -89,7 +89,7 @@ Dependencies DGraph 1.1+ is a performant, developer-friendly graph database.
 Repository https://github.com/thehonestscoop/lemma-chain
 Configuration All configuration values are set via Environment Variables.
 HASHID_SALT A random string used to create unique identifiers. Once set in production, it must not be modified.
-MAX_PAYLOAD_KB (default: 12kB) Each reference can store associated custom JSON data. This parameter sets the maximum size of the payload in kilobytes.</description>
+MAX_PAYLOAD_KB (default: 12) Each reference can store associated custom JSON data. This parameter sets the maximum size of the payload in kilobytes.</description>
     </item>
     
     <item>

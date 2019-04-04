@@ -162,7 +162,7 @@
 
 <p>A random string used to create unique identifiers. Once set in production, it must not be modified.</p>
 
-<h3 id="max-payload-kb-default-12kb">MAX_PAYLOAD_KB (default: 12kB)</h3>
+<h3 id="max-payload-kb-default-12">MAX_PAYLOAD_KB (default: 12)</h3>
 
 <p>Each reference can store associated custom JSON data. This parameter sets the maximum size of the payload in kilobytes.</p>
 
@@ -170,15 +170,19 @@
 
 <p>If the application sits behind a proxy, set to 1.</p>
 
+<h3 id="port-default-1323">PORT (default: 1323)</h3>
+
+<p>The port used to listen for connections.</p>
+
 <h3 id="query-timeout-default-300ms">QUERY_TIMEOUT (default: 300ms)</h3>
 
 <p>To prevent abuse of the service, a timeout (in ms) can be set.</p>
 
 <h3 id="cache-duration-default-15">CACHE_DURATION (default: 15)</h3>
 
-<p>Results to <code>GET</code> endpoints are cached for a duration (in seconds) based on this setting.</p>
+<p>Results of <code>GET</code> endpoints are cached for a duration (in minutes) based on this setting.</p>
 
-<h3 id="rate-limit-default-1-0">RATE_LIMIT (default 1.0)</h3>
+<h3 id="rate-limit-default-4-0">RATE_LIMIT (default 4.0)</h3>
 
 <p>To prevent abuse of the service, a maximum number of requests per second per IP address can be set.</p>
 
@@ -204,11 +208,12 @@
 <li><a href="#configuration"><strong>Configuration</strong></a>
 <ul>
 <li><a href="#hashid-salt">HASHID_SALT</a></li>
-<li><a href="#max-payload-kb-default-12kb">MAX_PAYLOAD_KB (default: 12kB)</a></li>
+<li><a href="#max-payload-kb-default-12">MAX_PAYLOAD_KB (default: 12)</a></li>
 <li><a href="#behind-proxy-default-0">BEHIND_PROXY (default: 0)</a></li>
+<li><a href="#port-default-1323">PORT (default: 1323)</a></li>
 <li><a href="#query-timeout-default-300ms">QUERY_TIMEOUT (default: 300ms)</a></li>
 <li><a href="#cache-duration-default-15">CACHE_DURATION (default: 15)</a></li>
-<li><a href="#rate-limit-default-1-0">RATE_LIMIT (default 1.0)</a></li>
+<li><a href="#rate-limit-default-4-0">RATE_LIMIT (default 4.0)</a></li>
 <li><a href="#recaptcha-secret">RECAPTCHA_SECRET</a></li>
 </ul></li>
 </ul></li>
