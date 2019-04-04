@@ -34,6 +34,9 @@ Each reference can store associated custom JSON data. This parameter sets the ma
 
 If the application sits behind a proxy, set to 1.
 
+### PORT (default: 1323)
+
+The port used to listen for connections.
 
 ### QUERY_TIMEOUT (default: 300ms)
 
