@@ -154,6 +154,17 @@
 
 <p><a href="https://github.com/thehonestscoop/lemma-chain">https://github.com/thehonestscoop/lemma-chain</a></p>
 
+<h2 id="docker"><strong>Docker</strong></h2>
+
+<p>A Docker image can be created using the <a href="https://github.com/thehonestscoop/lemma-chain/tree/master/docker">Dockerfile</a>.</p>
+
+<p>It is designed to store DGraph data in an s3-compatible bucket.</p>
+
+<p>You can run it with a command like this:</p>
+
+<pre><code>docker run --name lemma-chain -e AWS_ACCESS_KEY_ID=xxx_key -e AWS_SECRET_ACCESS_KEY=xxx_secret -e BUCKET_NAME=xxx_bucket_name --privileged -p 1323:1323 thehonestscoop/lemma-chain
+</code></pre>
+
 <h2 id="configuration"><strong>Configuration</strong></h2>
 
 <p>All configuration values are set via Environment Variables.</p>
@@ -205,6 +216,7 @@
 <ul>
 <li><a href="#dependencies"><strong>Dependencies</strong></a></li>
 <li><a href="#repository"><strong>Repository</strong></a></li>
+<li><a href="#docker"><strong>Docker</strong></a></li>
 <li><a href="#configuration"><strong>Configuration</strong></a>
 <ul>
 <li><a href="#hashid-salt">HASHID_SALT</a></li>

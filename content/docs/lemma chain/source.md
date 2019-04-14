@@ -17,6 +17,18 @@ The source code is openly available. It is programmed in Go 1.11+.
 
 [https://github.com/thehonestscoop/lemma-chain](https://github.com/thehonestscoop/lemma-chain)
 
+## **Docker**
+
+A Docker image can be created using the [Dockerfile](https://github.com/thehonestscoop/lemma-chain/tree/master/docker).
+
+It is designed to store DGraph data in an s3-compatible bucket.
+
+You can run it with a command like this:
+
+```
+docker run --name lemma-chain -e AWS_ACCESS_KEY_ID=xxx_key -e AWS_SECRET_ACCESS_KEY=xxx_secret -e BUCKET_NAME=xxx_bucket_name --privileged -p 1323:1323 thehonestscoop/lemma-chain
+```
+
 ## **Configuration**
 
 All configuration values are set via Environment Variables.
