@@ -54,6 +54,14 @@ An example request:
 }
 ```
 
+An example response:
+
+```json
+{
+  "link": "fjyvs4c2jk"
+}
+```
+
 ## **Find a ref and all its parents**
 
 `GET https://lemma-chain.thehonestscoop.com/:ref?depth=x&types=a,b`

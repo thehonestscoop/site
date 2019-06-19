@@ -26,7 +26,7 @@ Legal Precedents In common-law legal systems, Courts are expected to follow the 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thehonestscoop.com/docs/lemma-chain/account/</guid>
-      <description>Accounts A reference can be unowned owned by an account. The advantage of creating a registered account is that all references created under the account can be listed together.
+      <description>Accounts A reference can be owned by a registered account or unowned. The advantage of creating a registered account is that all references created under the account can be listed together.
 Each account must have a unique name. Once created, the name will be prepended with a @. Each account must also be registered with a unique non-disposable email address.
 Create POST https://lemma-chain.thehonestscoop.com/accounts
 An account name must not contain @, / and white-spaces.</description>

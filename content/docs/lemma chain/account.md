@@ -8,7 +8,7 @@ weight: 2
 
 # **Accounts**
 
-A reference can be unowned owned by an account. The advantage of creating a registered account is that all references created under the account can be listed together.
+A reference can be owned by a registered account or unowned. The advantage of creating a registered account is that all references created under the account can be listed together.
 
 Each account must have a unique name. Once created, the name will be prepended with a `@`. Each account must also be registered with a unique non-disposable email address.
 
