@@ -156,9 +156,9 @@
 
 <h3 id="parents-optional"><strong>parents</strong>  (optional)</h3>
 
-<p><strong>parents</strong> are other references that the prospective reference links to. It accepts an array of strings where the first part is the <code>ref type</code>. This can be an arbitrary tag. It is followed by a <code>:</code> and then the identifier of the other reference.</p>
+<p><strong>parents</strong> are other references that the prospective reference links to. It accepts an array of strings where the first part is the <code>ref type</code>. This can be an arbitrary tag that does not contain <code>&quot;</code>, <code>@</code> or <code>/</code>. It is followed by a <code>:</code> and then the identifier of the other reference.</p>
 
-<p>Each reference can have up to 100 parent refs.</p>
+<p>Each reference can have up to 250 parent refs.</p>
 
 <h3 id="data-required"><strong>data</strong>  (required)</h3>
 
@@ -176,7 +176,7 @@
 
 <p>An example request:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-	<span style="color:#f92672">&#34;owner&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+	<span style="color:#f92672">&#34;owner&#34;</span>: <span style="color:#e6db74">&#34;@alpha&#34;</span>,
 	<span style="color:#f92672">&#34;parents&#34;</span>: [<span style="color:#e6db74">&#34;required:@alpha/redsss242&#34;</span>, <span style="color:#e6db74">&#34;recommended:mnn2sdew76&#34;</span>],
 	<span style="color:#f92672">&#34;data&#34;</span>: <span style="color:#e6db74">&#34;{\&#34;custom_data\&#34;: \&#34;abcdef\&#34;}&#34;</span>,
 	<span style="color:#f92672">&#34;searchable&#34;</span>: <span style="color:#66d9ef">true</span>,
