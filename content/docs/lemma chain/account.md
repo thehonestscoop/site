@@ -10,14 +10,14 @@ weight: 2
 
 A reference can be owned by a registered account or unowned. The advantage of creating a registered account is that all references created under the account can be listed together.
 
-Each account must have a unique name. Once created, the name will be prepended with a `@`. Each account must also be registered with a unique non-disposable email address.
+Each account must have a unique name when lower-cased. Once created, the name will be prepended with a `@`. Each account must also be registered with a unique non-disposable email address.
 
 
 ## **Create**
 
 `POST https://lemma-chain.thehonestscoop.com/accounts`
 
-An account name must not contain `@`, `/` and white-spaces. It must also be less than 50 characters long.
+An account name must not contain `@`, `"`, `/` and white-spaces. It must also be less than 50 characters long.
 
 An example request:
 
@@ -42,7 +42,7 @@ If account creation is successful, a 200 Status code is returned.
 
 `GET https://lemma-chain.thehonestscoop.com/accounts/:name`
 
-All references owned by the `:name` will be listed provided that account owner is currently [authenticated]({{< relref "authentication.md" >}}) for the request. If the owner is not authenticated, the `email` information will not be revealed.  Only `searchable` references will be listed.
+All references owned by the `:name` will be listed provided that account owner is currently [authenticated]({{< relref "authentication.md" >}}) for the request. If the owner is not authenticated, the `email` information will not be revealed and only `searchable` references will be listed.
 
 
 An example response:

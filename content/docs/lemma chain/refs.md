@@ -21,9 +21,9 @@ The **owner** parameter sets the account name of the prospective reference. If u
 
 ### **parents**  (optional)
 
-**parents** are other references that the prospective reference links to. It accepts an array of strings where the first part is the `ref type`. This can be an arbitrary tag. It is followed by a `:` and then the identifier of the other reference.
+**parents** are other references that the prospective reference links to. It accepts an array of strings where the first part is the `ref type`. This can be an arbitrary tag that does not contain `"`, `@` or `/`. It is followed by a `:` and then the identifier of the other reference.
 
-Each reference can have up to 100 parent refs.
+Each reference can have up to 250 parent refs.
 
 ### **data**  (required)
 
@@ -44,7 +44,7 @@ An example request:
 
 ```json
 {
-	"owner": "",
+	"owner": "@alpha",
 	"parents": ["required:@alpha/redsss242", "recommended:mnn2sdew76"],
 	"data": "{\"custom_data\": \"abcdef\"}",
 	"searchable": true,
