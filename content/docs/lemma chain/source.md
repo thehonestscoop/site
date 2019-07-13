@@ -65,3 +65,34 @@ To prevent abuse of the service, a maximum number of requests per second per IP 
 ### RECAPTCHA_SECRET
 
 All `POST` requests require passing [Google recaptcha](https://www.google.com/recaptcha/intro/v3.html) validation. You can set your recaptcha secret here. The default value allows all requests to pass validation.
+
+### ACCOUNT VERIFICATION
+
+If both `GMAIL_ACCOUNT` and `GMAIL_PASSWORD` are not set, all accounts will be created in a verified state.
+
+WEBSITE_URL 
+
+The website url (if you create references and accounts via a website).
+
+HOST_URL 
+
+The url of the lemma chain server application.
+
+GMAIL_ACCOUNT
+
+Gmail email address for account verification emails to be sent from. 
+
+GMAIL_PASSWORD 
+
+Gmail password for the above gmail account.
+
+SMTP_HOST (default: "smtp.gmail.com")
+
+SMTP Host domain of your email server.
+
+SMTP_PORT (default: 587)
+
+SMTP Port of your email server.
+
+
+
