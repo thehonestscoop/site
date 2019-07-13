@@ -200,6 +200,34 @@
 <h3 id="recaptcha-secret">RECAPTCHA_SECRET</h3>
 
 <p>All <code>POST</code> requests require passing <a href="https://www.google.com/recaptcha/intro/v3.html">Google recaptcha</a> validation. You can set your recaptcha secret here. The default value allows all requests to pass validation.</p>
+
+<h3 id="account-verification">ACCOUNT VERIFICATION</h3>
+
+<p>If both <code>GMAIL_ACCOUNT</code> and <code>GMAIL_PASSWORD</code> are not set, all accounts will be created in a verified state.</p>
+
+<p>WEBSITE_URL</p>
+
+<p>The website url (if you create references and accounts via a website).</p>
+
+<p>HOST_URL</p>
+
+<p>The url of the lemma chain server application.</p>
+
+<p>GMAIL_ACCOUNT</p>
+
+<p>Gmail email address for account verification emails to be sent from.</p>
+
+<p>GMAIL_PASSWORD</p>
+
+<p>Gmail password for the above gmail account.</p>
+
+<p>SMTP_HOST (default: &ldquo;smtp.gmail.com&rdquo;)</p>
+
+<p>SMTP Host domain of your email server.</p>
+
+<p>SMTP_PORT (default: 587)</p>
+
+<p>SMTP Port of your email server.</p>
 </article>
 
       
@@ -227,6 +255,7 @@
 <li><a href="#cache-duration-default-15">CACHE_DURATION (default: 15)</a></li>
 <li><a href="#rate-limit-default-4-0">RATE_LIMIT (default 4.0)</a></li>
 <li><a href="#recaptcha-secret">RECAPTCHA_SECRET</a></li>
+<li><a href="#account-verification">ACCOUNT VERIFICATION</a></li>
 </ul></li>
 </ul></li>
 </ul>
