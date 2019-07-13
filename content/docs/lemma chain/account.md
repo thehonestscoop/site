@@ -12,6 +12,8 @@ A reference can be owned by a registered account or unowned. The advantage of cr
 
 Each account must have a unique name when lower-cased. Once created, the name will be prepended with a `@`. Each account must also be registered with a unique non-disposable email address.
 
+Upon account creation, you will need to verify the account by clicking an email link. If the account has not been verified within 48 hours, it will be automatically deleted. Please check your spam folder for the email.
+
 
 ## **Create**
 
